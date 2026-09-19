@@ -9,7 +9,8 @@ import {
   SidebarHeader,
   SidebarMenuButton,
 } from "@/components/ui/sidebar"
-import { Button, Progress, ProgressIndicator, ProgressValue } from "@base-ui/react"
+import {Button} from "@/components/ui/button"
+import { Progress, ProgressIndicator, ProgressValue } from "@base-ui/react"
 import { useUser } from "@clerk/nextjs"
 import { Archive, Files, LayoutGrid, Settings, SparkleIcon, User2, Users2Icon } from "lucide-react"
 import Image from "next/image"
