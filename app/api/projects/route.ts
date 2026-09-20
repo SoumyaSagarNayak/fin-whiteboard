@@ -6,6 +6,10 @@ export async function POST(req: NextRequest) {
     const { projectName, projectId } = await req.json();
     const user = await currentUser();
 
+    if (!user?.primaryEmailAddress?.emailAddress) {
+        return NextResponse.json({ error: "Unauthorized Access" });
+    }
+
     if (!projectName || !projectId) {
         return NextResponse.json({ error: "Project name and ID are required" });
     }
